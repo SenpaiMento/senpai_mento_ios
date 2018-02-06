@@ -1,20 +1,18 @@
 //
-//  ViewController.swift
+//  senpaiTableview.swift
 //  senpai_mento_ios
 //
-//  Created by 髙橋翔太 on 2018/01/30.
+//  Created by 瀧戸浩之 on 2018/02/06.
 //  Copyright © 2018年 SenpaiMento. All rights reserved.
 //
 
 import UIKit
 
-
-
-class ViewController: UIViewController ,
-    UITableViewDataSource, UITableViewDelegate{
+class senpaiTableview: UIViewController
+,UITableViewDataSource, UITableViewDelegate{
     
-  @IBOutlet weak var senpaitable:UITableView!
-
+    @IBOutlet weak var senpaitable:UITableView!
+    
     
     let imgArray: NSArray = [
         "img0","img1",
@@ -35,13 +33,13 @@ class ViewController: UIViewController ,
         "島田　福","新　干潟"]
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-   //Table Viewのセルの数を指定
+    //Table Viewのセルの数を指定
     func tableView(_ table: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         return imgArray.count
@@ -72,7 +70,7 @@ class ViewController: UIViewController ,
     }
     // Cell の高さを6０にする
     func tableView(_ table: UITableView,
-    heightForRowAt indexPath: IndexPath) -> CGFloat {
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
     
@@ -80,9 +78,10 @@ class ViewController: UIViewController ,
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-   
+    
+    
 }
+
 
 
 
