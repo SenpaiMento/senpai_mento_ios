@@ -138,6 +138,22 @@ class ViewController: UIViewController ,
     }
 
    
+
+    @IBAction func toMyprofiel(_ sender: Any) {
+        
+        // セグエを使用して画面を遷移
+        performSegue(withIdentifier: "myProfiel", sender: nil)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
