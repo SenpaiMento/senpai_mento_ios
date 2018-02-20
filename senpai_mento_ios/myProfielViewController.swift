@@ -34,4 +34,11 @@ class myProfielViewController: UIViewController {
     }
     */
 
+    @IBOutlet weak var profielTableContainer: UIView!
+    
+    
+    
+    
+    
+    
 }
