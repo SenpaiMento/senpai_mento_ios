@@ -10,14 +10,14 @@ import UIKit
 
 class TableViewController: UITableViewController,UIPickerViewDelegate, UIPickerViewDataSource{
     
-    
-    let dataList = [
-        "一定のペースで安定して勉強",
+let dataList = [
+        "一定のペースで勉強",
         "短期集中で勉強",
         "推薦入試狙い",
        ]
     
-    @IBOutlet var pickerView: [UIPickerView]!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
     
     @IBOutlet weak var label: UILabel!
     
@@ -54,6 +54,14 @@ class TableViewController: UITableViewController,UIPickerViewDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pickerView.delegate = self
+        
+        pickerView.dataSource = self
+        
+        label.text = "選択"
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -71,13 +79,14 @@ class TableViewController: UITableViewController,UIPickerViewDelegate, UIPickerV
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 11
     }
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -134,4 +143,7 @@ class TableViewController: UITableViewController,UIPickerViewDelegate, UIPickerV
     }
     */
 
+   
+
+    
 }
